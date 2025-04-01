@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    font-size: 45px;
+    color: #fff;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(1.5px);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    position: absolute;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 35%;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 33px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+.move {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.move.left {
+    left: 0;
+    background: url('images/pyramind.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.move.left::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(229, 205, 25, 0.885);
+}
+
+.move.right {  
+    right: 0;
+    background: url('images/mural.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.move.right::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 145, 241, 0.885);
+}
+
+.move.right,
+.move.left,
+.move.right::before,
+.move.left::before {
+    transition: all 1.5s ease-in-out;
+}
+
+.hover-left .left {
+    width: 75%;
+}
+
+.hover-left .right {
+    width: 25%;
+}
+
+.hover-right .right {
+    width: 75%;
+}
+
+.hover-right .left {
+    width: 25%;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        top: 300%;
+    }
+    .button {
+        padding: 1.2rem;
+        width: 12rem;
+    }
+}   

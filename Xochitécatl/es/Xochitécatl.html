@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xochitécatl (ES)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Vincular al mismo CSS y JS, si corresponde -->
+  <link rel="stylesheet" href="../x.css" />
+  <script src="../x.js" defer></script>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="site-header">
+    <div class="site-brand">
+      Xochitécatl
+    </div>
+    <!-- Botón de idioma: ir a la versión en inglés -->
+    <div class="language-toggle">
+      <a href="../en/Xochitécatl.html">English</a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Descubre la Rica Herencia</h1>
+      <p>Explora la arqueología, historia y vibrante cultura en Xochitécatl &amp; Cacaxtla.</p>
+      <a class="hero-button" href="#">Planifica tu Visita</a>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="page-content">
+
+    <!-- SECCIÓN DE NOTICIAS: Scroll horizontal -->
+    <section class="news-section">
+      <h2>Noticias</h2>
+      <div class="scroll-wrapper news-scroll">
+        <div class="scroll-container">
+          <!-- Tarjetas de ejemplo -->
+          <article class="card scroll-card">
+            <img src="../XImages/pyramind.jpg" alt="Noticia 1" />
+            <div class="card-body">
+              <h3>Apertura de Exhibición</h3>
+              <p>Acompáñanos en la gran inauguración de nuestra más reciente exhibición con murales y artefactos.</p>
+              <a class="card-button" href="#">Ver Más</a>
+            </div>
+          </article>
+          <article class="card scroll-card">
+            <img src="../XImages/pyramind.jpg" alt="Noticia 2" />
+            <div class="card-body">
+              <h3>Restauración del Sitio</h3>
+              <p>Hemos iniciado un nuevo proyecto para preservar importantes estructuras.</p>
+              <a class="card-button" href="#">Ver Más</a>
+            </div>
+          </article>
+          <article class="card scroll-card">
+            <img src="../XImages/pyramind.jpg" alt="Noticia 3" />
+            <div class="card-body">
+              <h3>Colaboración Comunitaria</h3>
+              <p>En conjunto con las comunidades locales, compartimos hallazgos arqueológicos.</p>
+              <a class="card-button" href="#">Ver Más</a>
+            </div>
+          </article>
+          <!-- Agrega más tarjetas si lo deseas -->
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- SECCIÓN DE EXHIBICIONES (fila o cuadrícula, manejado por JS) -->
+    <section class="exhibits-section">
+      <h2>Exhibiciones Digitales</h2>
+
+      <!-- Contenedor: comienza en modo-fila por defecto -->
+      <div id="exhibitsContainer" class="exhibits-container row-mode">
+
+        <!-- Primeras 4 exhibiciones que aparecen en modo-fila -->
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 1" />
+          <div class="card-body">
+            <h3>Murales en Línea</h3>
+            <p>Explora imágenes de alta resolución de nuestros famosos murales.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 2" />
+          <div class="card-body">
+            <h3>Recorrido Virtual</h3>
+            <p>Disfruta de un recorrido de 360&#176; por las pirámides y plazas de Xochitécatl.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 3" />
+          <div class="card-body">
+            <h3>Guías de Audio</h3>
+            <p>Descarga guías con narraciones de expertos sobre la historia del sitio.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 4" />
+          <div class="card-body">
+            <h3>Línea Cronológica Interactiva</h3>
+            <p>Conoce los hitos culturales de Xochitécatl a lo largo del tiempo.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+
+        <!-- Exhibiciones adicionales: ocultas en modo-fila, se muestran en cuadrícula -->
+        <article class="card exhibit-card hidden-when-row">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 5" />
+          <div class="card-body">
+            <h3>Nueva Exhibición 5</h3>
+            <p>Descripción de la exhibición 5.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+        <article class="card exhibit-card hidden-when-row">
+          <img src="../XImages/pyramind.jpg" alt="Exhibición 6" />
+          <div class="card-body">
+            <h3>Nueva Exhibición 6</h3>
+            <p>Descripción de la exhibición 6.</p>
+            <a class="card-button" href="#">Más Detalles</a>
+          </div>
+        </article>
+        <!-- Agrega las que necesites -->
+      </div>
+
+      <!-- Botón para cambiar entre modo-fila y modo-cuadrícula -->
+      <div class="button-center">
+        <button class="show-all-exhibits-btn" id="toggleExhibitsBtn">Mostrar Todas las Exhibiciones</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 INAH México</p>
+  </footer>
+
+</body>
+</html>

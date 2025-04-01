@@ -1,0 +1,270 @@
+/* x.css */
+
+/* IMPORT A MODERN FONT (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #F7F2EB;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2F5D50;
+  padding: 1rem 5%;
+}
+.site-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.language-toggle a {
+  background-color: #F7BA73;
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.language-toggle a:hover {
+  background-color: #e0a563;
+}
+
+/* HERO */
+.hero {
+  background-color: #E7DFD0;
+  padding: 4rem 5%;
+  text-align: center;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2F5D50;
+}
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+.hero-button {
+  display: inline-block;
+  background-color: #2F5D50;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.hero-button:hover {
+  background-color: #274D44;
+}
+
+/* MAIN CONTENT */
+.page-content {
+  padding: 2rem 5%;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #2F5D50;
+  font-weight: 600;
+}
+
+/* CARD STYLES */
+.card {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* NEW: Smooth transform transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-body {
+  padding: 1rem;
+  flex: 1;
+}
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #2F5D50;
+}
+.card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex: 1;
+}
+.card-button {
+  display: inline-block;
+  background-color: #F7BA73;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+/* NEW: On hover, scale up a bit and add a stronger shadow */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.card-button:hover {
+  background-color: #e0a563;
+}
+
+/* NEWS: Horizontal Scroll */
+.news-scroll {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  padding: 1rem;
+}
+.news-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+.scroll-container {
+  display: inline-flex;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+.scroll-card {
+  min-width: 280px;
+  max-width: 300px;
+  display: inline-block;
+}
+
+/* SECTION DIVIDER */
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+/* EXHIBITS: row-mode / grid-mode with fade transition */
+.exhibits-container {
+  opacity: 1;
+  transition: opacity 1.5s ease;
+  padding: 1rem;
+}
+
+/* Fading out/in behind the scenes (applied in JS) */
+.exhibits-container.fade-out {
+  opacity: 0;
+}
+
+/* ROW MODE: single horizontal row */
+.exhibits-container.row-mode {
+  display: inline-flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+.exhibits-container.row-mode::-webkit-scrollbar {
+  height: 8px;
+}
+.exhibits-container.row-mode::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+/* GRID MODE: 4 columns, multiple rows */
+.exhibits-container.grid-mode {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  overflow: visible;
+}
+
+/* Hide extra items in row-mode, show in grid-mode */
+.hidden-when-row {
+  display: none;
+}
+.exhibits-container.grid-mode .hidden-when-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* EXHIBIT CARDS */
+.exhibit-card {
+  min-width: 280px;
+  max-width: 300px;
+}
+
+/* BUTTON CENTERING */
+.button-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+.show-all-exhibits-btn {
+  background-color: #2F5D50;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.show-all-exhibits-btn:hover {
+  background-color: #274D44;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #2F5D50;
+  color: #FFF;
+  text-align: center;
+  padding: 1rem 5%;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 5%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* For very small screens, reduce 4 → 2 columns in grid-mode */
+  .exhibits-container.grid-mode {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
