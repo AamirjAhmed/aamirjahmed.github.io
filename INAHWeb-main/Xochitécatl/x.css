@@ -1,0 +1,341 @@
+/* x.css */
+
+/* IMPORT A MODERN FONT (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #fbf4e2; /* Papyrus background */
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7e463d;
+  padding: 1rem 5%;
+}
+.site-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-links {
+  display: flex;
+  gap: 1rem;
+}
+.header-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.header-links a:hover {
+  color: #80b9c0;
+}
+.language-toggle a {
+  background-color: #80b9c0;
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.language-toggle a:hover {
+  background-color: #448693;
+}
+
+/* HERO */
+.hero {
+  background-color: #E7DFD0;
+  padding: 4rem 5%;
+  text-align: center;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #7e463d;
+}
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #7e463d;
+}
+.hero-button {
+  display: inline-block;
+  background-color: #7e463d;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.hero-button:hover {
+  background-color: #5c2f27;
+}
+
+/* MAIN CONTENT */
+.page-content {
+  padding: 2rem 5%;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #7e463d;
+  font-weight: 600;
+}
+
+/* CARD STYLES */
+.card {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-body {
+  padding: 1rem;
+  flex: 1;
+}
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #7e463d;
+}
+.card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex: 1;
+}
+.card-button {
+  display: inline-block;
+  background-color: #80b9c0;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.card-button:hover {
+  background-color: #448693;
+}
+
+/* NEWS: Horizontal Scroll */
+.news-scroll {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  padding: 1rem;
+}
+.news-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+.scroll-container {
+  display: inline-flex;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+.scroll-card {
+  min-width: 280px;
+  max-width: 300px;
+  display: inline-block;
+}
+
+/* SECTION DIVIDER */
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+/* EXHIBITS SECTION: Grid layout with toggleable max-height for animation */
+.exhibits-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  overflow: hidden;
+  transition: max-height 1.5s ease, opacity 1.5s ease;
+  padding: 1rem;
+}
+
+/* Collapsed state: limit height to show only one row */
+.exhibits-container.collapsed {
+  max-height: 400px;  /* Adjust to match one row's height */
+}
+
+/* Expanded state: remove height restriction (use a large value) */
+.exhibits-container.expanded {
+  max-height: 5000px;
+}
+
+/* EXHIBIT CARDS */
+.exhibit-card {
+  min-width: 280px;
+  max-width: 300px;
+}
+
+/* BUTTON CENTERING */
+.button-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+.show-all-exhibits-btn {
+  background-color: #7e463d;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.show-all-exhibits-btn:hover {
+  background-color: #5c2f27;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #7e463d;
+  color: #FFF;
+  text-align: center;
+  padding: 1rem 5%;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* SELECTION COLOR */
+::selection {
+  background: #80b9c0;
+}
+
+/* LINK STATES */
+:link {
+  color: #80b9c0;
+}
+:link:hover {
+  color: #448693;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 5%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  /* For very small screens, reduce columns in exhibits */
+  .exhibits-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Make sure card is positioned */
+.card {
+    position: relative;
+    z-index: 0; /* So the pseudo-element can go behind it */
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Create the animated border via ::before pseudo-element */
+  .card::before {
+    content: "";
+    position: absolute;
+    /* Slightly outsize the card so the “border” can be visible */
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    /* This linear-gradient can be changed to your preferred rainbow colors */
+    background: linear-gradient(
+      90deg, 
+      #ff0080,  /* Magenta/Pink */
+      #8000ff,  /* Purple */
+      #00ffff,  /* Aqua/Cyan */
+      #ff0080   /* Back to Pink */
+    );
+    background-size: 200% 200%;
+    border-radius: 6px;
+    z-index: -1; /* Sit behind .card’s content */
+    
+    /* Keep it hidden initially */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    /* The actual movement of the gradient */
+    animation: animateBorder 3s linear infinite;
+  }
+  
+  @keyframes animateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* On hover, reveal the animated border */
+  .card:hover::before {
+    opacity: 1;
+  }
+  
+  /* You can still keep your existing hover scale/shadow */
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
