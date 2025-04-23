@@ -143,3 +143,27 @@ html, body {
 /* links too */
 :link { color: #80b9c0; } /* CSS link color (red) */
 :link:hover { color: #1a3f47; } /* CSS link hover (green) */
+
+@media (max-width: 600px) {
+  /* 
+     1) Re-stack the header’s right side (nav links + language toggle) 
+     2) Align them to the right or left as you see fit
+  */
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* or "flex-start" if you prefer left-aligned */
+    gap: 0.5rem;           /* small vertical spacing between elements */
+  }
+
+  /* Optionally reduce nav link spacing or font size if needed */
+  .header-links a {
+    font-size: 0.9rem;     /* slightly smaller text on mobile */
+  }
+
+  /* Make sure the language toggle button is fully visible */
+  .language-toggle a {
+    margin: 0;             /* remove any large left/right margin if present */
+    width: auto;           /* ensure it only takes up as much space as needed */
+  }
+}
