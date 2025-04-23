@@ -361,14 +361,14 @@ h2 {
 
 
 /* ——————————————————————————
-   MOBILE HEADER LAYOUT
+   MOBILE HEADER LAYOUT (tablet → phone)
    —————————————————————————— */
    @media (max-width: 768px) {
     .site-header {
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem 5%;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      padding: 1rem 5% !important;
     }
     .site-brand {
       width: 100%;
@@ -378,32 +378,28 @@ h2 {
     }
     .header-right {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.75rem !important;
     }
     .header-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.75rem !important;
     }
     .language-toggle {
-      /* put the button on its own “row” */
-      order: 1;
+      order: 1; /* drop it onto its own “row” */
     }
   }
   
-  /* tighten things further on very small screens */
+  /* tighten further on very small phones */
   @media (max-width: 480px) {
-    .site-brand {
-      font-size: 1.1rem;
-    }
+    .site-brand { font-size: 1.1rem; }
     .header-links a,
     .language-toggle a {
       font-size: 0.85rem;
       padding: 0.4rem 0.8rem;
     }
   }
-  
