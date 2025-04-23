@@ -1,0 +1,360 @@
+/* x.css */
+
+/* IMPORT A MODERN FONT (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #fbf4e2; /* Papyrus background */
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7e463d;
+  padding: 1rem 5%;
+}
+.site-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-links {
+  display: flex;
+  gap: 1rem;
+}
+.header-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.header-links a:hover {
+  color: #80b9c0;
+}
+.language-toggle a {
+  background-color: #80b9c0;
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.language-toggle a:hover {
+  background-color: #448693;
+}
+
+/* HERO */
+.hero {
+  background: url('../images/pyramind.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+  padding: 4rem 5%;
+  text-align: center;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+.hero-button {
+  display: inline-block;
+  background-color: #7e463d;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.hero-button:hover {
+  background-color: #5c2f27;
+}
+
+/* MAIN CONTENT */
+.page-content {
+  padding: 2rem 5%;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #7e463d;
+  font-weight: 600;
+}
+.site-brand a {
+  color: #FFF;
+}
+
+/* CARD STYLES */
+.card {
+  position: relative; /* for animated border */
+  z-index: 0;
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-body {
+  padding: 1rem;
+  flex: 1;
+}
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #7e463d;
+}
+.card p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex: 1;
+}
+.card-button {
+  display: inline-block;
+  background-color: #80b9c0;
+  color: #fff !important; 
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.card-button:hover {
+  background-color: #448693;
+}
+
+/* NEWS: Horizontal Scroll with custom scrollbar + snap */
+.news-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.4) rgba(0,0,0,0.05);
+}
+/* WebKit (Chrome/Safari) */
+.news-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.news-scroll::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 4px;
+  transition: background-color .2s;
+}
+.news-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+.news-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.scroll-card {
+  flex: 0 0 calc(25% - 1.125rem);
+  max-width: none;
+  min-width: 0;
+
+  /* snap each card into view */
+  scroll-snap-align: start;
+}
+
+/* SECTION DIVIDER */
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+/* EXHIBITS SECTION: Grid layout with toggleable max-height for animation */
+.exhibits-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  overflow: hidden;
+  transition: max-height 1.5s ease, opacity 1.5s ease;
+  padding: 1rem;
+}
+.exhibits-container.collapsed {
+  max-height: 400px;
+}
+.exhibits-container.expanded {
+  max-height: 5000px;
+}
+.exhibit-card {
+  min-width: auto;
+  max-width: none;
+  width: 100%;
+}
+
+/* BUTTON CENTERING */
+.button-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+.show-all-exhibits-btn {
+  background-color: #7e463d;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.show-all-exhibits-btn:hover {
+  background-color: #5c2f27;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #7e463d;
+  color: #FFF;
+  text-align: center;
+  padding: 1rem 5%;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* SELECTION COLOR */
+::selection {
+  background: #80b9c0;
+}
+
+/* LINK STATES */
+:link {
+  color: #80b9c0;
+}
+:link:hover {
+  color: #448693;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 5%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .exhibits-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  .header-links a {
+    font-size: 0.9rem;
+  }
+  .language-toggle a {
+    margin: 0;
+    width: auto;
+  }
+}
+
+/* Animated rainbow border (unchanged) */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(
+    90deg,
+    #80b9c0,
+    #448693,
+    #13bfea,
+    #024d90
+  );
+  background-size: 200% 200%;
+  border-radius: 6px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: animateBorder 3s linear infinite;
+}
+@keyframes animateBorder {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+  /* NEWS → switch off the scroll, go to 2-up grid */
+  .news-scroll {
+    overflow-x: hidden;      /* no more horizontal scroll */
+    white-space: normal;     /* allow wrapping */
+  }
+  .scroll-container {
+    display: grid !important;                      /* force grid here */
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding-bottom: 0;                             /* optional */
+  }
+  .scroll-card {
+    flex: none !important;                         /* cancel any flex‐basis */
+    width: 100% !important;                        /* fill its grid cell */
+  }
+}

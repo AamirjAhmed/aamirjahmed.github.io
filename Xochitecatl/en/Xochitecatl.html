@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xochitecatl (EN)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link to your modern stylesheet (updated color scheme) -->
+  <link rel="stylesheet" href="../x.css" />
+  <script src="../x.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand"><a href="../../index.html" >Xochitecatl</a></div>
+    
+    <!-- RIGHT-SIDE WRAPPER for Nav Links + Language Toggle -->
+    <div class="header-right">
+      <!-- Nav Links: Home, Facebook, People, Academia -->
+      <nav class="header-links">
+        <a href="../../index.html">Home</a>
+        <a href="https://www.facebook.com/profile.php?id=100038120622871">Facebook</a>
+        <a href="people.html">People</a>
+        <a href="../../academia.html">Academia</a>
+      </nav>
+      <!-- Language Toggle to Spanish -->
+      <div class="language-toggle">
+        <a href="..\es\Xochitecatl.html">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover the Rich Heritage</h1>
+      <p>Explore the archaeology, history, and vibrant culture at Xochitecatl &amp; Cacaxtla.</p>
+      <a class="hero-button" href="https://maps.app.goo.gl/N5fmY2yHbJwZ9d87A">Where to Visit</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+
+    <!-- NEWS SECTION: Horizontal Scroll -->
+    <section class="news-section">
+      <h2>News</h2>
+      <div class="scroll-wrapper news-scroll">
+        <div class="scroll-container">
+          <!-- Sample News Cards -->  
+          <article class="card scroll-card">
+            <img src="../XImages/pyramind.jpg" alt="News 1" />
+            <div class="card-body">
+              <h3>Exhibit Opening</h3>
+              <p>Sample Card with an Exhibit</p>
+              <a class="card-button" href="..\en\exhibits\example.html">View</a>
+            </div>
+          </article>
+          <!-- add more cards below -->
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- EXHIBITS SECTION: Grid that toggles between collapsed and expanded -->
+    <section class="exhibits-section">
+      <h2>Digital Exhibits</h2>
+
+      <!-- Exhibits Container: starts in collapsed state so only one row is visible -->
+      <div id="exhibitsContainer" class="exhibits-container collapsed">
+        <!-- All exhibit cards are added here. Non-technical users simply add cards -->
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 1" />
+          <div class="card-body">
+            <h3>Murals Online</h3>
+            <p>Explore high-resolution images of our famous murals anywhere.</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 2" />
+          <div class="card-body">
+            <h3>Virtual Tour</h3>
+            <p>Take a 360&#176; walkthrough of Xochitecatl’s pyramids and plazas.</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 3" />
+          <div class="card-body">
+            <h3>Audio Guides</h3>
+            <p>Download audio tours narrated by experts on site history and art.</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 4" />
+          <div class="card-body">
+            <h3>Interactive Timeline</h3>
+            <p>Discover a chronological journey of cultural milestones at Xochitecatl.</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <!-- Additional cards can be added here; they will wrap into additional rows when expanded -->
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 5" />
+          <div class="card-body">
+            <h3>New Exhibit 5</h3>
+            <p>Description for exhibit 5</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <article class="card exhibit-card">
+          <img src="../XImages/pyramind.jpg" alt="Exhibit 6" />
+          <div class="card-body">
+            <h3>New Exhibit 6</h3>
+            <p>Description for exhibit 6</p>
+            <a class="card-button" href="#">Learn More</a>
+          </div>
+        </article>
+        <!-- ... more cards as needed ... -->
+      </div>
+
+      <!-- Toggle Button to switch between collapsed and expanded -->
+      <div class="button-center">
+        <button class="show-all-exhibits-btn" id="toggleExhibitsBtn">Show All Exhibits</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 INAH Mexico</p>
+  </footer>
+
+</body>
+</html>

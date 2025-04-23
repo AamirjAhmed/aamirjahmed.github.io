@@ -1,0 +1,169 @@
+/* ARTICLE-ONLY STYLES
+   This CSS styles your article content.
+*/
+
+/* Global settings for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #fbf4e2;  /* Papyrus beige background for the entire page */
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* The main article container */
+.full-article {
+  width: 95%;              /* Takes up 95% of the viewport width */
+  max-width: 1400px;       /* Maximum width of 1400px */
+  margin: 2% auto;         /* Vertical margin in %, centered horizontally */
+  padding: 2%;
+  background-color: #fbf4e2; /* Same beige for a seamless look */
+  border: 1px solid #e0d8c3;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Article header */
+.full-article header {
+  text-align: center;
+  margin-bottom: 1%;
+}
+.full-article header h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #7e463d; /* Maches Mural*/
+}
+.full-article header p {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #7e463d;
+}
+
+/* Headings */
+.full-article h1, 
+.full-article h2 {
+  color: #7e463d;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-weight: 600;
+}
+.full-article h2 {
+  font-size: 1.5em;
+  border-bottom: 2px solid #F7BA73; /* Light orange accent underline */
+  padding-bottom: 0.5%;
+}
+
+/* Paragraphs */
+.full-article p {
+  margin-bottom: 1em;
+}
+
+/* Figures and Images */
+.full-article figure {
+  margin: 2% 0;
+  text-align: center;
+}
+.full-article figure img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.full-article figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5%;
+}
+
+/* Horizontal rule */
+.full-article hr {
+  margin: 2% 0;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Article Footer */
+.full-article footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 2%;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .full-article {
+    padding: 5%;
+  }
+  .full-article h1 {
+    font-size: 1.6em;
+  }
+  .full-article h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* HEADER and Language Toggle for the page */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7e463d;
+  padding: 1rem 5%;
+}
+.site-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.language-toggle a {
+  background-color: #80b9c0;
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.language-toggle a:hover {
+  background-color: #448693;
+}
+
+/* Changing selection to the blue color of the mural */
+::selection {
+  background: #80b9c0;
+} 
+
+/* links too */
+:link { color: #80b9c0; } /* CSS link color (red) */
+:link:hover { color: #1a3f47; } /* CSS link hover (green) */
+
+@media (max-width: 600px) {
+  /* 
+     1) Re-stack the header’s right side (nav links + language toggle) 
+     2) Align them to the right or left as you see fit
+  */
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* or "flex-start" if you prefer left-aligned */
+    gap: 0.5rem;           /* small vertical spacing between elements */
+  }
+
+  /* Optionally reduce nav link spacing or font size if needed */
+  .header-links a {
+    font-size: 0.9rem;     /* slightly smaller text on mobile */
+  }
+
+  /* Make sure the language toggle button is fully visible */
+  .language-toggle a {
+    margin: 0;             /* remove any large left/right margin if present */
+    width: auto;           /* ensure it only takes up as much space as needed */
+  }
+}
