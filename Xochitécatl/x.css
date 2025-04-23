@@ -148,7 +148,7 @@ h2 {
 .card-button {
   display: inline-block;
   background-color: #80b9c0;
-  color: #fff;
+  color: #fff !important; 
   padding: 0.6rem 1rem;
   border-radius: 4px;
   font-weight: 600;
