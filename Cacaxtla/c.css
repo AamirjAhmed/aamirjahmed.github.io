@@ -348,3 +348,21 @@ h2 {
   opacity: 1;
 }
 
+
+@media (max-width: 600px) {
+  /* NEWS → switch off the scroll, go to 2-up grid */
+  .news-scroll {
+    overflow-x: hidden;      /* no more horizontal scroll */
+    white-space: normal;     /* allow wrapping */
+  }
+  .scroll-container {
+    display: grid !important;                      /* force grid here */
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding-bottom: 0;                             /* optional */
+  }
+  .scroll-card {
+    flex: none !important;                         /* cancel any flex‐basis */
+    width: 100% !important;                        /* fill its grid cell */
+  }
+}
