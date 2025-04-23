@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Xochitécatl (EN)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Link to your modern stylesheet -->
+  <!-- Link to your modern stylesheet (updated color scheme) -->
   <link rel="stylesheet" href="../x.css" />
   <script src="../x.js" defer></script>
 </head>
@@ -12,11 +12,20 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="site-brand">
-      Xochitécatl
-    </div>
-    <div class="language-toggle">
-      <a href="..\es\Xochitécatl.html">Español</a>
+    <div class="site-brand"><a href="../../index.html" >Xochitécatl</a></div>
+    
+    <!-- RIGHT-SIDE WRAPPER for Nav Links + Language Toggle -->
+    <div class="header-right">
+      <!-- Nav Links: Home, People, Academia -->
+      <nav class="header-links">
+        <a href="../../index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="academia.html">Academia</a>
+      </nav>
+      <!-- Language Toggle to Spanish -->
+      <div class="language-toggle">
+        <a href="..\es\Xochitécatl.html">Español</a>
+      </div>
     </div>
   </header>
 
@@ -25,7 +34,7 @@
     <div class="hero-content">
       <h1>Discover the Rich Heritage</h1>
       <p>Explore the archaeology, history, and vibrant culture at Xochitécatl &amp; Cacaxtla.</p>
-      <a class="hero-button" href="#">Plan Your Visit</a>
+      <a class="hero-button" href="https://maps.app.goo.gl/N5fmY2yHbJwZ9d87A">Where to Visit</a>
     </div>
   </section>
 
@@ -37,77 +46,30 @@
       <h2>News</h2>
       <div class="scroll-wrapper news-scroll">
         <div class="scroll-container">
-          <!-- Sample News Cards -->
+          <!-- Sample News Cards -->  
           <article class="card scroll-card">
             <img src="../XImages/pyramind.jpg" alt="News 1" />
             <div class="card-body">
               <h3>Exhibit Opening</h3>
-              <p>Join us for the grand opening of our latest exhibit featuring murals and artifacts.</p>
+              <p>Sample Card with an Exhibit</p>
               <a class="card-button" href="..\en\exhibits\example.html">View</a>
             </div>
           </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 2" />
-            <div class="card-body">
-              <h3>Site Restoration</h3>
-              <p>We have initiated a new project to preserve important structures.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 3" />
-            <div class="card-body">
-              <h3>Community Outreach</h3>
-              <p>Partnering with locals to share archaeology findings.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 3" />
-            <div class="card-body">
-              <h3>Community Outreach</h3>
-              <p>Partnering with locals to share archaeology findings.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 3" />
-            <div class="card-body">
-              <h3>Community Outreach</h3>
-              <p>Partnering with locals to share archaeology findings.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 3" />
-            <div class="card-body">
-              <h3>Community Outreach</h3>
-              <p>Partnering with locals to share archaeology findings.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <article class="card scroll-card">
-            <img src="../XImages/pyramind.jpg" alt="News 3" />
-            <div class="card-body">
-              <h3>Community Outreach</h3>
-              <p>Partnering with locals to share archaeology findings.</p>
-              <a class="card-button" href="#">Show More</a>
-            </div>
-          </article>
-          <!-- Add more cards as desired -->
+          <!-- add more cards below -->
+
         </div>
       </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- EXHIBITS SECTION: Single row or 4-column grid, toggled by JS -->
+    <!-- EXHIBITS SECTION: Grid that toggles between collapsed and expanded -->
     <section class="exhibits-section">
       <h2>Digital Exhibits</h2>
 
-      <!-- Exhibits Container: start in row-mode by default -->
-      <div id="exhibitsContainer" class="exhibits-container row-mode">
-        <!-- The first 4 items that appear in row-mode -->
+      <!-- Exhibits Container: starts in collapsed state so only one row is visible -->
+      <div id="exhibitsContainer" class="exhibits-container collapsed">
+        <!-- All exhibit cards are added here. Non-technical users simply add cards -->
         <article class="card exhibit-card">
           <img src="../XImages/pyramind.jpg" alt="Exhibit 1" />
           <div class="card-body">
@@ -140,9 +102,8 @@
             <a class="card-button" href="#">Learn More</a>
           </div>
         </article>
-
-        <!-- Additional items that remain hidden in row-mode, but show in grid-mode -->
-        <article class="card exhibit-card hidden-when-row">
+        <!-- Additional cards can be added here; they will wrap into additional rows when expanded -->
+        <article class="card exhibit-card">
           <img src="../XImages/pyramind.jpg" alt="Exhibit 5" />
           <div class="card-body">
             <h3>New Exhibit 5</h3>
@@ -150,7 +111,7 @@
             <a class="card-button" href="#">Learn More</a>
           </div>
         </article>
-        <article class="card exhibit-card hidden-when-row">
+        <article class="card exhibit-card">
           <img src="../XImages/pyramind.jpg" alt="Exhibit 6" />
           <div class="card-body">
             <h3>New Exhibit 6</h3>
@@ -158,10 +119,10 @@
             <a class="card-button" href="#">Learn More</a>
           </div>
         </article>
-        <!-- Add as many as you like -->
+        <!-- ... more cards as needed ... -->
       </div>
 
-      <!-- Toggle Button to switch between row-mode & grid-mode -->
+      <!-- Toggle Button to switch between collapsed and expanded -->
       <div class="button-center">
         <button class="show-all-exhibits-btn" id="toggleExhibitsBtn">Show All Exhibits</button>
       </div>

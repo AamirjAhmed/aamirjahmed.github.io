@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Academia - Xochitécatl & Cacaxtla (ES)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Link to your main stylesheet for consistent styling -->
+  <link rel="stylesheet" href="../x.css" />
+  <script src="../x.js" defer></script>
+
+  <!-- Inline CSS to refine card layout and button position -->
+  <style>
+    /* HERO: shorter, cyan background */
+  .hero{
+    background:
+      linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),  /* dark layer   */
+      url("../../images/mural.png") center/cover no-repeat !important;
+        background-image: url("../../images/mural.png");
+        background-size: cover;
+        background-position: center center;
+        min-height: 200px; 
+        padding: 2rem 5% !important;
+    }
+
+    /* Two-column grid on desktop, single column on mobile */
+    .news-section .scroll-wrapper {
+      padding: 1rem 0;
+    }
+    .news-section .scroll-container {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* dos columnas en pantallas grandes */
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .news-section .scroll-container {
+        grid-template-columns: 1fr;   /* una sola columna en móvil */
+      }
+    }
+
+    /* Cartas un poco más altas; botón al fondo */
+    .scroll-card {
+      width: 100%;
+      min-height: 320px; 
+      max-width: none;          
+      display: flex;
+      flex-direction: column;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1rem;
+    }
+    .card-body h3 {
+      margin-bottom: 0.5rem;
+    }
+    .card-body p {
+      margin-bottom: 1rem;
+      flex: 1;  /* empuja el botón al fondo */
+    }
+    .card-body .card-button {
+      margin-top: auto;  
+      color: #fff !important; 
+      align-self: flex-start; 
+    }
+    .scroll-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand">
+      <a href="../../index.html">Xochitécatl</a>
+    </div>
+    
+    <div class="header-right">
+      <nav class="header-links">
+        <a href="../../index.html">Inicio</a>
+        <a href="gente.html">Personas</a>
+        <a href="academia-es.html" style="text-decoration: underline;">Academia</a>
+      </nav>
+      <!-- Language toggle: link back to English version -->
+      <div class="language-toggle">
+        <a href="../en/academia.html">English</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Academia en Xochitécatl-Cacaxtla</h1>
+      <p>Investigaciones arqueológicas, artículos académicos y publicaciones.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+    <section class="news-section">
+      <h2>Artículos y Estudios Recientes</h2>
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+
+          <!-- CARD #1 -->
+          <article class="card scroll-card">
+            <img src="../../images/xochitecal.jpg" alt="Artículo 1" />
+            <div class="card-body">
+              <h3>Título del Artículo Uno</h3>
+              <p>Un breve resumen o extracto sobre esta investigación.</p>
+              <a class="card-button" href="articles/articulo1.html">Leer Más</a>
+            </div>
+          </article>
+
+          <!-- CARD #2 -->
+          <article class="card scroll-card">
+            <img src="../../images/pyramind.jpg" alt="Artículo 1" />
+            <div class="card-body">
+              <h3>Título del Artículo Uno</h3>
+              <p>Un breve resumen o extracto sobre esta investigación.</p>
+              <a class="card-button" href="articles/articulo1.html">Leer Más</a>
+            </div>
+                    </article>
+          <!-- Agrega más cartas según sea necesario -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 INAH México</p>
+  </footer>
+
+</body>
+</html>

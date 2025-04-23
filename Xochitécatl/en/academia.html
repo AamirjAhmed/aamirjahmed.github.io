@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Academia – Xochitécatl & Cacaxtla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main stylesheet / scripts -->
+  <link rel="stylesheet" href="../x.css" />
+  <script src="../x.js" defer></script>
+
+  <!-- Inline tweaks: hero overlay + card layout -->
+  <style>
+    /* HERO: dark overlay on mural */
+    .hero{
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),  /* dark layer  */
+        url("../../images/mural.png") center/cover no-repeat !important;
+      min-height: 200px;
+      padding: 2rem 5% !important;
+    }
+
+    /* Two-column grid on desktop, single column on mobile */
+    .news-section .scroll-wrapper{ padding:1rem 0; }
+    .news-section .scroll-container{
+      width:80%;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr; /* two columns on large screens */
+      gap:1.5rem;
+    }
+    @media(max-width:768px){
+      .news-section .scroll-container{ grid-template-columns:1fr; } /* one column on mobile */
+    }
+
+    /* Slightly taller cards; button sticks to bottom */
+    .scroll-card{
+      width:100%;
+      min-height:320px;
+      max-width:none;
+      display:flex;
+      flex-direction:column;
+    }
+    .card-body{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      padding:1rem;
+    }
+    .card-body h3{ margin-bottom:.5rem; }
+    .card-body p{
+      margin-bottom:1rem;
+      flex:1;               /* push button downward */
+    }
+    .card-body .card-button{
+      margin-top:auto;
+      color:#fff !important;
+      align-self:flex-start;
+    }
+    .scroll-card img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand">
+      <a href="../../index.html">Xochitécatl</a>
+    </div>
+
+    <div class="header-right">
+      <nav class="header-links">
+        <a href="../../index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="academia.html" style="text-decoration: underline;">Academia</a>
+      </nav>
+      <!-- Language toggle -->
+      <div class="language-toggle">
+        <a href="../es/academia.html">Español</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Academia at Xochitécatl-Cacaxtla</h1>
+      <p>Archaeological research, academic articles, and publications.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-content">
+    <section class="news-section">
+      <h2>Recent Articles &amp; Studies</h2>
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+
+          <!-- CARD #1 -->
+          <article class="card scroll-card">
+            <img src="../../images/xochitecal.jpg" alt="Article 1" />
+            <div class="card-body">
+              <h3>Article Title One</h3>
+              <p>A brief summary or snippet about this research.</p>
+              <a class="card-button" href="articles/article1.html">Read More</a>
+            </div>
+          </article>
+
+          <!-- CARD #2 -->
+          <article class="card scroll-card">
+            <img src="../../images/pyramind.jpg" alt="Article 2" />
+            <div class="card-body">
+              <h3>Article Title Two</h3>
+              <p>A short overview or abstract of this study.</p>
+              <a class="card-button" href="articles/article2.html">Read More</a>
+            </div>
+          </article>
+          <!-- Add more cards as needed -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 INAH Mexico</p>
+  </footer>
+
+</body>
+</html>
